@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=obex? ( >=dev-libs/libical-0.48 ) >=dev-libs/glib-2.32.4-r1 >=sys-apps/dbus-1.6.12 udev? ( >=virtual/udev-204 ) cups? ( >=net-print/cups-1.6.2-r5 ) systemd? ( >=sys-apps/systemd-204-r1 ) client? ( >=sys-libs/readline-6.2_p1 ) tools? ( >=dev-libs/check-0.9.6 >=dev-python/dbus-python-1.2.0 >=dev-python/pygobject-2.28.6-r53 ) virtual/pkgconfig
+DESCRIPTION=Bluetooth Tools and System Daemons for Linux
+EAPI=5
+HOMEPAGE=http://www.bluez.org
+IUSE=client cups debug experimental monitor obex systemd tools udev
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=obex? ( >=dev-libs/libical-0.48 ) >=dev-libs/glib-2.32.4-r1 >=sys-apps/dbus-1.6.12 udev? ( >=virtual/udev-204 ) cups? ( >=net-print/cups-1.6.2-r5 ) systemd? ( >=sys-apps/systemd-204-r1 ) client? ( >=sys-libs/readline-6.2_p1 ) tools? ( >=dev-libs/check-0.9.6 >=dev-python/dbus-python-1.2.0 >=dev-python/pygobject-2.28.6-r53 )
+SLOT=0
+SRC_URI=mirror://kernel/linux/bluetooth/bluez-5.10.tar.xz
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
+_md5_=89f4ce5c52dfef7fd167f641cbc3649c

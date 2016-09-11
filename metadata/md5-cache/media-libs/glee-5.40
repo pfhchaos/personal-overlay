@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=virtual/opengl !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=OpenGL Easy Extension library
+EAPI=2
+HOMEPAGE=http://elf-stone.com/glee.php
+KEYWORDS=~amd64 ~x86
+LICENSE=as-is
+RDEPEND=virtual/opengl
+SLOT=0
+SRC_URI=http://elf-stone.com/downloads/GLee/GLee-5.4.0-src.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=ef090b48938d1627a755c5e60e3b6b33
