@@ -36,6 +36,7 @@ DEPEND="dev-libs/expat
 	x11-libs/libX11
 	x11-proto/xproto
 	x11-libs/wxGTK:2.9 
+	dev-lang/lua
 	dev-libs/tinyxml
 	media-libs/glee
 	dev-python/pygobject
