@@ -44,7 +44,6 @@ DEPEND="dev-libs/expat
 RDEPEND="${DEPEND}
 	app-arch/gzip
 	=media-gfx/flam3-9999
-	media-video/mplayer
 	net-misc/curl
 	x11-misc/xdg-utils"
 
