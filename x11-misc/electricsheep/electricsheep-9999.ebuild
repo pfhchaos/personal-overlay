@@ -48,7 +48,7 @@ RDEPEND="${DEPEND}
 	x11-misc/xdg-utils"
 
 src_prepare () {
-	epatch "${FILESDIR}/electricsheep-updated-function-names.patch"
+#	epatch "${FILESDIR}/electricsheep-updated-function-names.patch"
 	mv client_generic/* .
 	eautoreconf
 }
