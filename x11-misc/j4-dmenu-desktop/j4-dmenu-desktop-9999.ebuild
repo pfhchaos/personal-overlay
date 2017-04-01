@@ -18,9 +18,9 @@ IUSE=""
 DEPEND=""
 RDEPEND="x11-misc/dmenu"
 
-src_prepare() {
-	epatch ${FILESDIR}/constructor-fix.patch
-}
+#src_prepare() {
+#	epatch ${FILESDIR}/constructor-fix.patch
+#}
 src_configure() {
 	local mycmakeargs=(
 		-DNO_TESTS=1
