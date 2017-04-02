@@ -23,9 +23,7 @@ SLOT="0"
 LICENSE="GPL-3"
 RDEPEND="app-admin/sysstat
 	x11-wm/i3"
-DEPEND="${RDEPEND}
-	app-text/ronn
-	"
+DEPEND="${RDEPEND}"
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
