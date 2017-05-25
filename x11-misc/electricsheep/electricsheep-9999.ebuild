@@ -32,7 +32,7 @@ DEPEND="dev-lang/lua
 	sys-libs/zlib
 	virtual/ffmpeg
 	x11-libs/libX11
-	x11-libs/Xrender
+	x11-libs/libXrender
 	x11-libs/wxGTK:3.0"
 
 RDEPEND="${DEPEND}
