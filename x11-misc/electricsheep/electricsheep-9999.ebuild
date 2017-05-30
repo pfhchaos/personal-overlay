@@ -24,6 +24,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-lang/lua
 	dev-libs/boost
+	dev-libs/tinyxml
 	gnome-base/libgtop
 	media-libs/freeglut
 	media-libs/glee
