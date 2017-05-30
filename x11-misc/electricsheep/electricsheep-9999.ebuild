@@ -45,6 +45,12 @@ src_prepare () {
 	eautoreconf
 }
 
+src_configure() {
+	econf
+	# get rid of the RUNPATH that interferes with hardware accelerated OpenGL drivers
+	sed -i -e '/^hardcode_libdir_flag_spec/d' libtool
+}
+
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed"
 }
