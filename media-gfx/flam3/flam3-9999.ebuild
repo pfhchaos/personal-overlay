@@ -23,6 +23,7 @@ DEPEND="dev-libs/libxml2
 RDEPEND="${DEPEND}"
 
 src_configure() {
+	eautoreconf
 	econf --enable-shared
 }
 
