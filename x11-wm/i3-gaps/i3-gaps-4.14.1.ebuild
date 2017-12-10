@@ -30,6 +30,7 @@ CDEPEND="dev-libs/libev
 	>=x11-libs/pango-1.30.0[X]"
 DEPEND="${CDEPEND}
 	app-text/asciidoc
+	app-text/ronn	
 	doc? ( app-text/xmlto dev-lang/perl )
 	test? (
 		dev-perl/AnyEvent
