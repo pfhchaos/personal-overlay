@@ -1,6 +1,5 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=2
 
@@ -10,9 +9,7 @@ WX_GTK_VER="3.0"
 
 inherit autotools eutils git-r3 wxwidgets
 
-DESCRIPTION="realize the collective dream of sleeping computers from all over
-the internet - this ebuild is a dirty hack to the new SVN based on the old SVN
-ebuild, needs a lot of cleaning!"
+DESCRIPTION="Electricsheep Screen Saver"
 HOMEPAGE="http://electricsheep.org/"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/scottdraves/electricsheep.git"
@@ -20,7 +17,7 @@ EGIT_REPO_URI="https://github.com/scottdraves/electricsheep.git"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 DEPEND="dev-lang/lua
 	dev-libs/boost
@@ -54,4 +51,3 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed"
 }
-
