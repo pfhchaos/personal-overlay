@@ -1,10 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
+EAPI=6
 
-inherit git-2 cmake-utils
+inherit git-r3 cmake-utils
 
 DESCRIPTION="A rewrite of i3-dmenu-desktop, which is much faster"
 HOMEPAGE="https://github.com/enkore/j4-dmenu-desktop"
@@ -18,9 +17,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="x11-misc/dmenu"
 
-#src_prepare() {
-#	epatch ${FILESDIR}/constructor-fix.patch
-#}
 src_configure() {
 	local mycmakeargs=(
 		-DNO_TESTS=1
