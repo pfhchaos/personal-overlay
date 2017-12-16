@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:  $
 
-EAPI="4"
+EAPI="6"
 
-inherit eutils autotools-utils
+inherit eutils
 
 DESCRIPTION="Pianod Pandora music client daemon"
 HOMEPAGE="http://projects.mini-dweeb.org/projects/unagi"
@@ -20,22 +19,14 @@ IUSE=""
 RDEPEND="
 	dev-libs/json-c
 	dev-libs/libbsd
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0/20
 	media-libs/faad2
 	media-libs/libao
 	media-libs/libmad
 	net-libs/gnutls"
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig"
-
+	virtual/pkgconfig"
 
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
-
-PATCHES=(
-       "${FILESDIR}/${P}-pkgconfig-json.patch"
-)
-
-
-

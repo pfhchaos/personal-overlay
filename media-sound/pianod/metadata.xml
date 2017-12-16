@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+	<email>pfhchaos@gmail.com</email>
+	<description>Primary maintainer</description>
+</maintainer>
+<longdescription>The legacy version of pianod is a Pandora client with line-oriented and Websocket TCP/IP control interfaces. A simple protocol makes for easy clients, mix scripting, integration with a home automation system, or use as multiple-user music system. pianod has a full-featured web-based interface that allows multiple listeners to view status and share control.</longdescription>
+</pkgmetadata>
