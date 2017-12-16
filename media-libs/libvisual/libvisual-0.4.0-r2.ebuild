@@ -1,11 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.4.0-r2.ebuild,v 1.14 2013/02/02 22:51:26 ago Exp $
 
 EAPI=4
 inherit eutils libtool
 
-DESCRIPTION="Libvisual is an abstraction library that comes between applications and audio visualisation plugins."
+DESCRIPTION="Audio visualization abstraction library."
 HOMEPAGE="http://libvisual.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
