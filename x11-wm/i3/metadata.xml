@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+	<email>pfhchaos@gmail.com</email>
+	<description>Primary maintainer</description>
+</maintainer>
+<longdescription>i3 is a tiling window manager designed for X11, inspired by wmii, and written in C.[4] It supports tiling, stacking, and tabbing layouts, which it handles dynamically.</longdescription>
+</pkgmetadata>
