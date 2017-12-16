@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer><email>naota@gentoo.org</email></maintainer>
+<maintainer type="person">
+	<email>pfhchaos@gmail.com</email>
+	<description>Primary maintainer</description>
+</maintainer>
+<longdescription>An improved Python library to control i3wm.</longdescription>
 </pkgmetadata>
