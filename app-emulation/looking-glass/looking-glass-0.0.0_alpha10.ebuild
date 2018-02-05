@@ -22,7 +22,6 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 
-
 DEPEND="app-emulation/spice-protocol
 		media-libs/libsdl2
 		media-libs/sdl2-ttf"
