@@ -14,7 +14,7 @@ if [[ ${PV} = 9999 ]]; then
 	EGIT_BOOTSTRAP=""
 	KEYWORDS=""
 else
-	EGIT_COMMIT="${PV}"
+	EGIT_COMMIT="a10"
 	KEYWORDS="~amd64"
 fi
 
@@ -27,3 +27,5 @@ DEPEND="app-emulation/spice-protocol
 		media-libs/sdl2-ttf"
 
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${P}/client"
