@@ -29,3 +29,7 @@ DEPEND="app-emulation/spice-protocol
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}/client"
+
+src_install() {
+	dobin bin/looking-glass-client
+}
