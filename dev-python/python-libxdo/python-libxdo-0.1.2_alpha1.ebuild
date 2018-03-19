@@ -5,11 +5,14 @@ EAPI=6
 
 PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5,3_3,3_3,3_4} )
 
-inherit distutils-r1
+inherit distutils-r1 versionator
 
 DESCRIPTION="Python bindings for libxdo"
 HOMEPAGE="https://github.com/rshk/python-libxdo"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-0.1.2a1.tar.gz"
+
+MY_PV="0.1.2a1"
+
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
