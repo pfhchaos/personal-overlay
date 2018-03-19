@@ -12,10 +12,17 @@ HOMEPAGE="https://github.com/rshk/python-libxdo"
 
 MY_PV="0.1.2a1"
 
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${MY_PV}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-python/python-xlib[${PYTHON_USEDEP}]"
+
+S="${WORKDIR}/${PN}-${MY_PV}"
+
+src_prepare() {
+	sed -i -e "s/find_packages()/find_packages(exclude=\['tests'\])/" setup.py || die "Sed failed!"
+	default
+}
