@@ -1,2 +1,3 @@
-gentoo:default/linux/amd64/17.0/desktop
-gentoo:default/linux/amd64/17.0/systemd
+gentoo:default/linux/amd64
+gentoo:targets/desktop
+gentoo:targets/systemd
