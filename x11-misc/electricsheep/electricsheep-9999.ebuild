@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=2
+EAPI=5
 
 # WANT_AUTOCONF=latest
 # WANT_AUTOMAKE=latest
@@ -19,13 +19,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 
-DEPEND="dev-lang/lua
+DEPEND="dev-lang/lua:0
 	dev-libs/boost
 	dev-libs/tinyxml
 	gnome-base/libgtop
 	media-libs/freeglut
 	media-libs/glee
-	media-libs/libpng
+	media-libs/libpng:0/16
 	net-misc/curl
 	sys-libs/zlib
 	virtual/ffmpeg
