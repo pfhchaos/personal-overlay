@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=2
+EAPI=5
 
 inherit autotools git-r3
 
@@ -16,8 +16,8 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="dev-libs/libxml2
-	virtual/jpeg
-	media-libs/libpng
+	virtual/jpeg:62
+	media-libs/libpng:0/16
 	!<=x11-misc/electricsheep-2.6.8-r2"
 RDEPEND="${DEPEND}"
 
