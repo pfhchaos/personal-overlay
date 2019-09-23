@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<maintainer type="person">
-	<email>pfhchaos@gmail.com</email>
-	<description>Primary maintainer</description>
-</maintainer>
-<longdescription>The Electric Sheep is a cyborg mind. It harnesses the collective intelligence of 450,000 computers and people to create abstract art with mathematics and Darwinian evolution. The result is seamless, organic, and infinite. See also http://electricsheep.org and http://scottdraves.com.</longdescription>
-</pkgmetadata>

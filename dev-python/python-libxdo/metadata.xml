@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<maintainer type="person">
-	<email>pfhchaos@gmail.com</email>
-	<description>Primary maintainer</description>
-</maintainer>
-<longdescription>This package aims to provide ctypes-based Python bindings (and a more pythonic way to use the C library, of course..)</longdescription>
-</pkgmetadata>
