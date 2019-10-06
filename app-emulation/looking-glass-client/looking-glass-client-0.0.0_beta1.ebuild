@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit git-r3
+inherit git-r3 cmake-utils
 
 DESCRIPTION="A KVMFR (KVM Frame Relay) Implementation"
 HOMEPAGE="https://github.com/gnif/LookingGlass"
@@ -31,5 +31,6 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${P}/client"
 
 src_install() {
-	dobin bin/looking-glass-client
+	pwd
+	dobin ${BUILD_DIR}/looking-glass-client
 }
