@@ -20,7 +20,6 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="debug +host"
 
 RDEPEND="dev-libs/libconfig:0=
