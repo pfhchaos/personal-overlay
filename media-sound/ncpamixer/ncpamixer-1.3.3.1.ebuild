@@ -24,3 +24,11 @@ RDEPEND="media-sound/pulseaudio sys-libs/ncurses:0/6[unicode]"
 DEPEND="dev-util/cmake ${RDEPEND}"
 
 CMAKE_USE_DIR="${S}/src/"
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_use wide)
+	)
+
+	cmake-utils_src_configure
+}
