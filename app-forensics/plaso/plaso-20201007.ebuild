@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=dev-python/pip-7.0.0[${PYTHON_USEDEP}]
-	>=dev-python/PyYAML-3.10[${PYTHON_USEDEP}]
-	>=dev-python/XlsxWriter-0.9.3[${PYTHON_USEDEP}]
+	>=dev-python/pyyaml-3.10[${PYTHON_USEDEP}]
+	>=dev-python/xlsxwriter-0.9.3[${PYTHON_USEDEP}]
 	>=dev-python/artifacts-20190305[${PYTHON_USEDEP}]
 	dev-python/bencodepy[${PYTHON_USEDEP}]
 	>=dev-python/certifi-2016.9.26[${PYTHON_USEDEP}]
