@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Andriller - is software utility with a collection of forensic tools for smartphones."
 HOMEPAGE="https://github.com/den4uk/andriller"
-SRC_URI="https://github.com/den4uk/${P}/archive/${V}.tar.gz -> ${PV}.tar.gz"
+SRC_URI="https://github.com/den4uk/${PN}/archive/${V}.tar.gz -> ${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
