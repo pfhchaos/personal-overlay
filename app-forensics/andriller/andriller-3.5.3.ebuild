@@ -20,7 +20,7 @@ RDEPEND="dev-util/android-tools \
 	dev-python/wheel[${PYTHON_USEDEP}] \
 	>=dev-python/dateutils-0.6.7[${PYTHON_USEDEP}] \
 	>=dev-python/javaobj-py3-0.4.1[${PYTHON_USEDEP}] \
-	>=dev-python/pycryptodomex-3.9.7[${PYTHON_USEDEP}] \
+	>=dev-python/pycryptodome-3.9.7[${PYTHON_USEDEP}] \
 	>=dev-python/python-dateutil-0.6.7[${PYTHON_USEDEP}] \
 	>=dev-python/xlsxwriter-1.2.8[${PYTHON_USEDEP}] \
 	>=dev-python/jinja-2.11.2[${PYTHON_USEDEP}] \
