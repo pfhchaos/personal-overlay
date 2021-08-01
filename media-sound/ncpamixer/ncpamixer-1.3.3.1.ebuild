@@ -20,7 +20,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="media-sound/pulseaudio sys-libs/ncurses:0/6[unicode]"
+RDEPEND="media-sound/pulseaudio \
+	sys-libs/ncurses:0/6"
 DEPEND="dev-util/cmake ${RDEPEND}"
 
 CMAKE_USE_DIR="${S}/src/"
