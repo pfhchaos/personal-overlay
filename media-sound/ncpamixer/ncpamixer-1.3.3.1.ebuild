@@ -1,10 +1,10 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 [[ ${PV} == *9999 ]] && SCM="git-r3"
-inherit cmake-utils ${SCM}
+inherit cmake ${SCM}
 
 DESCRIPTION="An ncurses mixer for PulseAudio inspired by pavucontrol."
 HOMEPAGE="https://github.com/fulhax/ncpamixer"
@@ -29,5 +29,5 @@ CMAKE_USE_DIR="${S}/src/"
 src_configure() {
 	local mycmakeargs=("-DUSE_WIDE=TRUE")
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
