@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS=""
 
 RDEPEND="dev-libs/wayland\
-	media-libs/mesa[egl]"
+	media-libs/mesa"
 DEPEND="dev-util/meson\
 	dev-vcs/mercurial\
 	virtual/pkgconfig
