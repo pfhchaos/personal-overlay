@@ -16,7 +16,7 @@ if [[ ${PV} = 9999 ]]; then
 	EGIT_BOOTSTRAP=""
 	KEYWORDS="*"
 else
-	EGIT_COMMIT="otopi-1.9.6"
+	EGIT_COMMIT="I77545843c07abe3aa2ff047b44ca81ec85426c68"
 	KEYWORDS="~amd64"
 fi
 
