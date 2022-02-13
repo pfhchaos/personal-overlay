@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3_{6,7,8,9} )
 
-inherit git-r3 autotools python-single-r1
+inherit git-r3 autotools python-single-r1 systemd
 
 DESCRIPTION="oVirt Task Oriented Pluggable Installer/Implementation"
 HOMEPAGE="https://github.com/oVirt/ovirt-hosted-engine-ha"
@@ -35,3 +35,8 @@ src_prepare() {
 	default
 }
 
+src_install() {
+	systemd_dounit "initscripts/ovirt-ha-agent.service"
+	systemd_dounit "initscripts/ovirt-ha-broker.service"
+	default
+}
