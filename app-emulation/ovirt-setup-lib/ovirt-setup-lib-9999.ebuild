@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python3_{6,7,8,9} )
 inherit git-r3 autotools python-single-r1
 
 DESCRIPTION="The Vdsm service exposes an API for managing virtualization hosts running the KVM hypervisor technology."
-HOMEPAGE="https://github.com/oVirt/vdsm"
+HOMEPAGE="https://github.com/oVirt/ovirt-setup-lib"
 
-EGIT_REPO_URI="https://github.com/oVirt/vdsm"
+EGIT_REPO_URI="https://github.com/oVirt/ovirt-setup-lib"
 
 if [[ ${PV} = 9999 ]]; then
 	EGIT_BOOTSTRAP=""
