@@ -28,7 +28,10 @@ RDEPEND="${PYTHON_DEPS}
 	${RDEPEND}
 	"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	acct-user/vdsm
+	acct-group/vdsm
+	"
 
 src_prepare() {
 	eautoreconf
