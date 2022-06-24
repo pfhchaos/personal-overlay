@@ -1,5 +1,5 @@
 #!/sbin/openrc-run
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 description="Virtual Machine Management daemon (libvirt)"
@@ -16,7 +16,7 @@ retry="${LIBVIRTD_TERMTIMEOUT}"
 depend() {
 	need virtlogd
 	use ceph dbus iscsid virtlockd
-	after cgconfig corosync ebtables iptables ip6tables nfs nfsmount ntp-client ntpdportmap rpc.statd sanlock xenconsoled
+	after cgconfig corosync ebtables iptables ip6tables shorewall nfs nfsmount ntp-client ntpdportmap rpc.statd sanlock xenconsoled
 	USE_FLAG_FIREWALLD
 }
 

@@ -1,33 +1,37 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} )
+# Packages which get releases together:
+# app-emacs/nxml-libvirt-schemas
+# dev-python/libvirt-python
+# dev-perl/Sys-Virt
+# app-emulation/libvirt
+# Please bump them together!
 
+PYTHON_COMPAT=( python3_{8..11} )
+VERIFY_SIG_OPENPGP_KEY_PATH="${BROOT}"/usr/share/openpgp-keys/libvirt.org.asc
 inherit meson bash-completion-r1 linux-info python-any-r1 readme.gentoo-r1 tmpfiles verify-sig
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.com/libvirt/libvirt.git"
 	EGIT_BRANCH="master"
-	SRC_URI=""
-	SLOT="0"
 else
 	SRC_URI="https://libvirt.org/sources/${P}.tar.xz
 		verify-sig? ( https://libvirt.org/sources/${P}.tar.xz.asc )"
 	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
-	SLOT="0/${PV}"
 fi
 
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="https://www.libvirt.org/ https://gitlab.com/libvirt/libvirt/"
 LICENSE="LGPL-2.1"
-VERIFY_SIG_OPENPGP_KEY_PATH=${BROOT}/usr/share/openpgp-keys/libvirt.org.asc
+SLOT="0/${PV}"
 IUSE="
 	apparmor audit bash-completion +caps dtrace firewalld fuse glusterfs
-	iscsi iscsi-direct +libvirtd lvm libssh lxc nfs nls numa openvz
-	parted pcap policykit +qemu rbd sasl selinux +udev
+	iscsi iscsi-direct +libvirtd lvm libssh libssh2 lxc nfs nls numa openvz
+	parted pcap policykit +qemu rbd sanlock sasl selinux +udev
 	virtualbox +virt-network wireshark-plugins xen zfs
 "
 
@@ -48,6 +52,7 @@ BDEPEND="
 	dev-perl/XML-XPath
 	dev-python/docutils
 	virtual/pkgconfig
+	net-libs/rpcsvc-proto
 	bash-completion? ( >=app-shells/bash-completion-2.0 )
 	verify-sig? ( sec-keys/openpgp-keys-libvirt )"
 
@@ -59,32 +64,30 @@ BDEPEND="
 RDEPEND="
 	acct-user/qemu
 	app-misc/scrub
-	>=dev-libs/glib-2.48.0
-	dev-libs/libgcrypt:0
+	>=dev-libs/glib-2.56.0
+	dev-libs/libgcrypt
 	dev-libs/libnl:3
-	>=dev-libs/libxml2-2.7.6
+	>=dev-libs/libxml2-2.9.1
 	>=net-analyzer/openbsd-netcat-1.105-r1
-	>=net-libs/gnutls-1.0.25:0=
-	net-libs/libssh2
-	net-libs/libtirpc
-	net-libs/rpcsvc-proto
+	>=net-libs/gnutls-3.2.0:=
+	net-libs/libtirpc:=
 	>=net-misc/curl-7.18.0
 	sys-apps/dbus
 	sys-apps/dmidecode
 	sys-devel/gettext
-	sys-libs/ncurses:0=
-	sys-libs/readline:=
+	>=sys-libs/readline-7.0:=
 	virtual/acl
 	apparmor? ( sys-libs/libapparmor )
 	audit? ( sys-process/audit )
 	caps? ( sys-libs/libcap-ng )
 	dtrace? ( dev-util/systemtap )
 	firewalld? ( >=net-firewall/firewalld-0.6.3 )
-	fuse? ( sys-fs/fuse:0= )
+	fuse? ( sys-fs/fuse:= )
 	glusterfs? ( >=sys-cluster/glusterfs-3.4.1 )
-	iscsi? ( sys-block/open-iscsi )
+	iscsi? ( >=sys-block/open-iscsi-1.18.0 )
 	iscsi-direct? ( >=net-libs/libiscsi-1.18.0 )
-	libssh? ( net-libs/libssh )
+	libssh? ( >=net-libs/libssh-0.7:= )
+	libssh2? ( >=net-libs/libssh2-1.3 )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2[-device-mapper-only(-)] )
 	lxc? ( !sys-apps/systemd[cgroup-hybrid(-)] )
 	nfs? ( net-fs/nfs-utils )
@@ -96,46 +99,45 @@ RDEPEND="
 		>=sys-block/parted-1.8[device-mapper]
 		sys-fs/lvm2[-device-mapper-only(-)]
 	)
-	pcap? ( >=net-libs/libpcap-1.0.0 )
+	pcap? ( >=net-libs/libpcap-1.8.0 )
 	policykit? (
 		acct-group/libvirt
 		>=sys-auth/polkit-0.9
 	)
 	qemu? (
 		>=app-emulation/qemu-2.11
-		dev-libs/yajl
+		>=dev-libs/yajl-2.0.3:=
 	)
 	rbd? ( sys-cluster/ceph )
-	sasl? ( dev-libs/cyrus-sasl )
+	sanlock? ( sys-cluster/sanlock )
+	sasl? ( >=dev-libs/cyrus-sasl-2.1.26 )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	virt-network? (
-		net-dns/dnsmasq[dhcp,ipv6,script]
+		net-dns/dnsmasq[dhcp,ipv6(+),script]
 		net-firewall/ebtables
-		>=net-firewall/iptables-1.4.10[ipv6]
+		>=net-firewall/iptables-1.4.10
 		net-misc/radvd
 		sys-apps/iproute2[-minimal]
 	)
-	wireshark-plugins? ( net-analyzer/wireshark:= )
+	wireshark-plugins? ( >=net-analyzer/wireshark-2.6.0:= )
 	xen? (
 		>=app-emulation/xen-4.9.0
 		app-emulation/xen-tools:=
 	)
 	udev? (
-		virtual/libudev
+		virtual/libudev:=
 		>=x11-libs/libpciaccess-0.10.9
 	)
-	zfs? ( sys-fs/zfs )"
-
+	zfs? ( sys-fs/zfs )
+	kernel_linux? ( sys-apps/util-linux )"
 DEPEND="${BDEPEND}
 	${RDEPEND}
 	${PYTHON_DEPS}"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-6.0.0-fix_paths_in_libvirt-guests_sh.patch
-	"${FILESDIR}"/${PN}-6.7.0-do-not-use-sysconfig.patch
-	"${FILESDIR}"/${PN}-6.7.0-fix-paths-for-apparmor.patch
-	"${FILESDIR}"/${PN}-7.9.0-fix_cgroupv2.patch
-	"${FILESDIR}"/${PN}-7.10.0-fix_soname.patch
+	"${FILESDIR}"/${PN}-8.2.0-do-not-use-sysconfig.patch
+	"${FILESDIR}"/${PN}-8.2.0-fix-paths-for-apparmor.patch
 )
 
 pkg_setup() {
@@ -245,6 +247,7 @@ src_configure() {
 		$(meson_feature iscsi-direct storage_iscsi_direct)
 		$(meson_feature libvirtd driver_libvirtd)
 		$(meson_feature libssh)
+		$(meson_feature libssh2)
 		$(meson_feature lvm storage_lvm)
 		$(meson_feature lvm storage_mpath)
 		$(meson_feature lxc driver_lxc)
@@ -258,6 +261,7 @@ src_configure() {
 		$(meson_feature qemu driver_qemu)
 		$(meson_feature qemu yajl)
 		$(meson_feature rbd storage_rbd)
+		$(meson_feature sanlock)
 		$(meson_feature sasl)
 		$(meson_feature selinux)
 		$(meson_feature udev)
@@ -268,7 +272,6 @@ src_configure() {
 		$(meson_feature zfs storage_zfs)
 
 		-Dnetcf=disabled
-		-Dsanlock=disabled
 
 		-Ddriver_esx=enabled
 		-Dinit_script=systemd
