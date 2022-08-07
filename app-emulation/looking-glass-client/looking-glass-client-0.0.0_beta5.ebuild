@@ -14,7 +14,7 @@ if [[ ${PV} = 9999 ]]; then
 	EGIT_BOOTSTRAP=""
 	KEYWORDS=""
 else
-	EGIT_COMMIT="B4"
+	EGIT_COMMIT="B5"
 	KEYWORDS="~amd64"
 fi
 
@@ -28,7 +28,8 @@ RDEPEND="dev-libs/libconfig:0=
 	media-libs/fontconfig:1.0
 	media-libs/libsdl2
 	media-libs/sdl2-ttf
-	virtual/glu"
+	virtual/glu
+	x11-libs/libXpresent"
 DEPEND="${RDEPEND}
 	app-emulation/spice-protocol
 	virtual/pkgconfig"
