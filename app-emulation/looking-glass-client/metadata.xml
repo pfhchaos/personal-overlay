@@ -5,5 +5,8 @@
 	<email>pfhchaos@gmail.com</email>
 	<description>Primary maintainer</description>
 </maintainer>
+<use>
+  <flag name="host">Build windows host execuatable</flag>
+</use>
 <longdescription>Looking Glass is an open source application that allows the use of a KVM (Kernel-based Virtual Machine) configured for VGA PCI Pass-through without an attached physical monitor, keyboard or mouse. </longdescription>
 </pkgmetadata>
