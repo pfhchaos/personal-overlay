@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer type="person">
-	<email>pfhchaos@gmail.com</email>
-	<description>Primary maintainer</description>
+  <email>pfhchaos@gmail.com</email>
+  <description>Primary maintainer</description>
 </maintainer>
 <use>
   <flag name="host">Build windows host execuatable</flag>

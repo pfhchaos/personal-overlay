@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit git-r3
+inherit git-r3 qmake-utils
 
 DESCRIPTION="A KVMFR (KVM Frame Relay) Implementation"
 HOMEPAGE="https://github.com/gnif/LookingGlass"
