@@ -9,14 +9,9 @@ DESCRIPTION="A KVMFR (KVM Frame Relay) Implementation"
 HOMEPAGE="https://github.com/gnif/LookingGlass"
 
 EGIT_REPO_URI="https://github.com/gnif/LookingGlass"
+EGIT_COMMIT="B6-rc1"
 
-if [[ ${PV} = 9999 ]]; then
-	EGIT_BOOTSTRAP=""
-	KEYWORDS=""
-else
-	EGIT_COMMIT="B6-rc1"
-	KEYWORDS="~amd64"
-fi
+KEYWORDS="~amd64"
 
 LICENSE="GPL-2"
 SLOT="0"
