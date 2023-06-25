@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
+DISTUTILS_USE_PEP517=setuptools
 
 PYTHON_COMPAT=( python3_{6,7,8,9,10} )
 
