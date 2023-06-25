@@ -1,0 +1,13 @@
+BDEPEND=dev-qt/qt-creator >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
+DEPEND=dev-qt/qtwebchannel dev-qt/qtwebengine dev-qt/qtquickcontrols2 dev-qt/qtdeclarative5
+DESCRIPTION=A KVMFR (KVM Frame Relay) Implementation
+EAPI=7
+HOMEPAGE=https://github.com/gnif/LookingGlass
+INHERIT=git-r3 qmake-utils
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=dev-qt/qtwebchannel dev-qt/qtwebengine dev-qt/qtquickcontrols2 dev-qt/qtdeclarative5
+SLOT=0
+_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	qmake-utils	59420c906278d16deaaa629f9d115707
+_md5_=059c781af70ba991a096eaeb01e8275a

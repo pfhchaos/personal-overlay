@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=net-libs/nodejs
+DESCRIPTION=Bitwarden CLI
+EAPI=7
+HOMEPAGE=https://bitwarden.com/
+KEYWORDS=amd64
+LICENSE=GPL-3
+RDEPEND=net-libs/nodejs
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/bitwarden/cli/releases/download/v1.11.0/bw-linux-1.11.0.zip
+_md5_=f28de1cf44403573ac683161c3318a36
