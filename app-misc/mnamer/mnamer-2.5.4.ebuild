@@ -13,8 +13,9 @@ HOMEPAGE="https://github.com/jkwill87/mnamer"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 RDEPEND="
-dev-python/teletype
 dev-python/guessit
+dev-python/requests-cache
+dev-python/teletype
 "
 LICENSE="MIT"
 SLOT="0"
