@@ -19,6 +19,7 @@ IUSE="debug +host"
 
 RDEPEND="dev-libs/libconfig:0=
 	dev-libs/nettle:=[gmp]
+	gui-libs/libdecor
 	media-libs/freetype:2
 	media-libs/fontconfig:1.0
 	media-libs/libsdl2
