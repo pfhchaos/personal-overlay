@@ -9,6 +9,7 @@ DESCRIPTION="A KVMFR (KVM Frame Relay) Implementation"
 HOMEPAGE="https://github.com/gnif/LookingGlass"
 
 SRC_URI="https://github.com/gnif/LookingGlass/archive/refs/tags/B7-rc1.tar.gz -> ${P}.tar.gz"
+S=${WORKDIR}/LookingGlass-B7-rc1
 
 LICENSE="GPL-2"
 SLOT="0"
