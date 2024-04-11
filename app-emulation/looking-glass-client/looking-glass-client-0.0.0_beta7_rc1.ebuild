@@ -1,15 +1,14 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit git-r3 cmake
+inherit cmake
 
 DESCRIPTION="A KVMFR (KVM Frame Relay) Implementation"
 HOMEPAGE="https://github.com/gnif/LookingGlass"
 
-EGIT_REPO_URI="https://github.com/gnif/LookingGlass"
-EGIT_COMMIT="B7-rc1"
+SRC_URI="https://github.com/gnif/LookingGlass/archive/refs/tags/B7-rc1.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
