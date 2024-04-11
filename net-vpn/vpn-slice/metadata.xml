@@ -5,6 +5,9 @@
     <email>pfh.chaos@gmail.com</email>
     <name>Scott Shoup</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">dlenski/vpn-slice</remote-id>
+  </upstream>
   <longdescription>
     This is a replacement for the vpnc-script used by OpenConnect or VPNC.
 

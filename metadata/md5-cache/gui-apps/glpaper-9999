@@ -1,4 +1,4 @@
-BDEPEND=dev-vcs/mercurial >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+BDEPEND=dev-vcs/mercurial >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
 DEFINED_PHASES=compile configure install test unpack
 DEPEND=dev-util/meson dev-vcs/mercurial virtual/pkgconfig dev-libs/wayland media-libs/mesa
 DESCRIPTION=A program that renders glsl shaders as your wallpaper for wlroots based compositors.
@@ -9,5 +9,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=dev-libs/wayland media-libs/mesa
 SLOT=0
-_eclasses_=mercurial	e6a56a378cb9241482284b8b897c7a39	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	a34d5f83235297b76d71eaf8deb53768	meson	18d046bdb14e1bdb22cce6e5d953e364
+_eclasses_=mercurial	e6a56a378cb9241482284b8b897c7a39	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	meson	92696988eaddba122c4cedc191f59bcb
 _md5_=715d4816a714a3f03bffff2eee973166
