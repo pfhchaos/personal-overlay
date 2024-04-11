@@ -9,7 +9,7 @@ DESCRIPTION="A KVMFR (KVM Frame Relay) Implementation"
 HOMEPAGE="https://github.com/gnif/LookingGlass"
 
 EGIT_REPO_URI="https://github.com/gnif/LookingGlass"
-EGIT_COMMIT="B6"
+EGIT_COMMIT="B7-rc1"
 
 LICENSE="GPL-2"
 SLOT="0"
