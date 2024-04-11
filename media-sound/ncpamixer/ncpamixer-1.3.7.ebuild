@@ -12,17 +12,16 @@ HOMEPAGE="https://github.com/fulhax/ncpamixer"
 if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/fulhax/ncpamixer.git"
 else
-	SRC_URI="https://github.com/fulhax/ncpamixer/archive/${PV}.tar.gz \
-        -> ${P}.tar.gz"
+	SRC_URI="https://github.com/fulhax/ncpamixer/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="media-sound/pulseaudio \
+RDEPEND="media-libs/libpulse \
 	sys-libs/ncurses:0/6"
-DEPEND="dev-util/cmake ${RDEPEND}"
+DEPEND="dev-build/cmake ${RDEPEND}"
 
 CMAKE_USE_DIR="${S}/src/"
 
