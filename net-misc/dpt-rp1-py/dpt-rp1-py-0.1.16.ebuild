@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Python script to manage electronic paper devices made by Sony (Digital Paper, DPT-RP1, DPT-CP1) or Fujitsu (Quaderno) without the Digital Paper App."
 HOMEPAGE="https://github.com/janten/dpt-rp1-py"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/janten/${PN}/archive/refs/tags/v${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
