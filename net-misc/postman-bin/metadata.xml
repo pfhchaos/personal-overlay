@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<maintainer type="person">
-	<email>pfhchaos@gmail.com</email>
-	<description>Primary maintainer</description>
-</maintainer>
-<longdescription>Looking Glass is an open source application that allows the use of a KVM (Kernel-based Virtual Machine) configured for VGA PCI Pass-through without an attached physical monitor, keyboard or mouse. </longdescription>
-</pkgmetadata>
