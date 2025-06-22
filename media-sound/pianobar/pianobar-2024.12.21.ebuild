@@ -9,7 +9,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/PromyLOPh/pianobar.git"
 else
-	SRC_URI="https://github.com/PromyLOPh/${PN}/archive/refs/tags/${PV}.tar.gz" -> "${P}.tar.gz"
+	SRC_URI="https://6xq.net/${PN}/${P}.tar.bz2"
 	KEYWORDS="amd64 x86"
 fi
 
