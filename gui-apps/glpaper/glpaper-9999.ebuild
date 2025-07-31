@@ -16,8 +16,6 @@ KEYWORDS=""
 
 RDEPEND="dev-libs/wayland\
 	media-libs/mesa"
-DEPEND="dev-util/meson\
-	dev-vcs/mercurial\
-	virtual/pkgconfig
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
