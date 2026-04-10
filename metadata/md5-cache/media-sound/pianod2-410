@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure
+DEPEND=libao? ( media-libs/libao ) gstreamer? ( media-libs/gstreamer ) ffmpeg? ( media-video/ffmpeg ) tls? ( || ( gnutls? ( net-libs/gnutls ) mbedtls? ( net-libs/mbedtls ) openssl? ( virtual/openssl ) ) ) pandora? ( net-misc/curl[ssl] ) compression? ( sys-libs/zlib ) access-control? ( sys-apps/tcp-wrappers ) virtual/pkgconfig
+DESCRIPTION=Pianod Pandora music client daemon
+EAPI=8
+HOMEPAGE=http://projects.mini-dweeb.org/projects/unagi
+IUSE=+gnutls libao ffmpeg +access-control +filesystem +gstreamer mbedtls pam +pandora sdl openssl taglib +tls +compression
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=libao? ( media-libs/libao ) gstreamer? ( media-libs/gstreamer ) ffmpeg? ( media-video/ffmpeg ) tls? ( || ( gnutls? ( net-libs/gnutls ) mbedtls? ( net-libs/mbedtls ) openssl? ( virtual/openssl ) ) ) pandora? ( net-misc/curl[ssl] ) compression? ( sys-libs/zlib ) access-control? ( sys-apps/tcp-wrappers )
+REQUIRED_USE=|| ( pandora filesystem ) || ( gstreamer ffmpeg ) tls? ( || ( gnutls mbedtls openssl ) )
+SLOT=0
+SRC_URI=http://deviousfish.com/Downloads/pianod2/pianod2-410.tar.gz
+_md5_=83b89fb36a2f9a250576ec064f32d9df
