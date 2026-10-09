@@ -20,9 +20,9 @@ IUSE="scoring"
 # RDEPEND = pyproject [project] deps -> portage atoms. The three sibling
 # packages are this overlay's own -9999 live ebuilds (unversioned: 9999 is the
 # only version). pywayland lives in this overlay.
-# TODO(verify, mostly phase 1.5 off-tree): dev-python/vulkan (python bindings)
-# and dev-python/musdb are almost certainly OFF-TREE; dev-python/moderngl /
-# glcontext / pytorch atoms need confirming against ::gentoo + ::guru.
+# dev-python/vulkan lives in this overlay; moderngl/glcontext are in ::guru.
+# musdb (the eval dataset loader) is dev-only and stays in the venv — see the
+# dropped eval USE flag — so there's no atom for it here.
 RDEPEND="
 	>=dev-python/moderngl-5.12.0[${PYTHON_USEDEP}]
 	>=dev-python/numpy-2.0[${PYTHON_USEDEP}]

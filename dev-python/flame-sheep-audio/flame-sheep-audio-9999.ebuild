@@ -30,12 +30,10 @@ RDEPEND="
 	dev-python/platformdirs[${PYTHON_USEDEP}]
 	watchdog? ( dev-python/python-systemd[${PYTHON_USEDEP}] )
 "
-# TODO(verify atoms): dev-python/pygobject is PyGObject; dev-python/python-systemd
-# and dev-python/BeatNet are the uncertain ones — systemd-python may need a
-# different atom, and BeatNet is almost certainly OFF-TREE (handle in phase 1.5:
-# GURU-first, else author an ebuild). The particle-filter path's native _btrack
-# module is provided out-of-package by dev-python/btrack-beat-tracker (this
-# overlay) — add it here if/when the PF path becomes a supported runtime option.
+# dev-python/pygobject is PyGObject; dev-python/python-systemd (the watchdog
+# dep) is in ::gentoo. The beatnet_lite detector's BeatNet oracle and its
+# native particle-filter module are eval/dev-only — they live in the dev venv,
+# not portage (see the dropped beatnet USE flag), so no atom for them here.
 DEPEND="${RDEPEND}"
 # scikit-build-core pulls itself via DISTUTILS_USE_PEP517; it needs a toolchain,
 # cmake, ninja and pybind11 headers to compile the _prtcqt extension.
