@@ -15,7 +15,7 @@ EGIT_REPO_URI="https://github.com/pfhchaos/flame-sheep.git"
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS=""
-IUSE="scoring eval"
+IUSE="scoring"
 
 # RDEPEND = pyproject [project] deps -> portage atoms. The three sibling
 # packages are this overlay's own -9999 live ebuilds (unversioned: 9999 is the
@@ -43,7 +43,6 @@ RDEPEND="
 		sci-ml/pytorch[${PYTHON_USEDEP}]
 		dev-python/scikit-image[${PYTHON_USEDEP}]
 	)
-	eval? ( dev-python/musdb[${PYTHON_USEDEP}] )
 "
 DEPEND="${RDEPEND}"
 

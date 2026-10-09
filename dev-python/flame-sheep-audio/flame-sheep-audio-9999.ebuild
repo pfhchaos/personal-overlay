@@ -17,7 +17,7 @@ SLOT="0"
 # Live ebuild: no KEYWORDS (unmask with package.accept_keywords ** in 1.6).
 KEYWORDS=""
 
-IUSE="beatnet watchdog"
+IUSE="watchdog"
 
 # RDEPEND = the pyproject [project] core deps, mapped to portage atoms.
 # sounddevice lives in THIS overlay (dev-python/sounddevice).
@@ -28,10 +28,9 @@ RDEPEND="
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	dev-python/platformdirs[${PYTHON_USEDEP}]
-	watchdog? ( dev-python/systemd-python[${PYTHON_USEDEP}] )
-	beatnet? ( dev-python/BeatNet[${PYTHON_USEDEP}] )
+	watchdog? ( dev-python/python-systemd[${PYTHON_USEDEP}] )
 "
-# TODO(verify atoms): dev-python/pygobject is PyGObject; dev-python/systemd-python
+# TODO(verify atoms): dev-python/pygobject is PyGObject; dev-python/python-systemd
 # and dev-python/BeatNet are the uncertain ones — systemd-python may need a
 # different atom, and BeatNet is almost certainly OFF-TREE (handle in phase 1.5:
 # GURU-first, else author an ebuild). The particle-filter path's native _btrack
