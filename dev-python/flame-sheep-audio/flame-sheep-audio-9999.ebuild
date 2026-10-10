@@ -4,6 +4,10 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=scikit-build-core
+# Single-impl: this is a service daemon (shmem + dbus IPC), not a library
+# linked in-process by multiple interpreters, so it builds for ONE python.
+# Reuse is over the IPC contract, not by import.
+DISTUTILS_SINGLE_IMPL=1
 PYTHON_COMPAT=( python3_{12..13} )
 
 inherit distutils-r1 git-r3 systemd
@@ -20,25 +24,30 @@ KEYWORDS=""
 IUSE="watchdog"
 
 # RDEPEND = the pyproject [project] core deps, mapped to portage atoms.
-# sounddevice lives in THIS overlay (dev-python/sounddevice).
+# sounddevice lives in THIS overlay (dev-python/sounddevice). Every python dep
+# is a multi-impl library, so under single-impl they are wrapped in
+# python_gen_cond_dep. dev-python/python-systemd (the watchdog dep) is in
+# ::gentoo. The beatnet_lite detector's BeatNet oracle and its native
+# particle-filter module are eval/dev-only — they live in the dev venv, not
+# portage (see the dropped beatnet USE flag), so no atom for them here.
 RDEPEND="
-	>=dev-python/numpy-2.0[${PYTHON_USEDEP}]
-	>=dev-python/scipy-1.16[${PYTHON_USEDEP}]
-	>=dev-python/sounddevice-0.5.1[${PYTHON_USEDEP}]
-	dev-python/dbus-python[${PYTHON_USEDEP}]
-	dev-python/pygobject[${PYTHON_USEDEP}]
-	dev-python/platformdirs[${PYTHON_USEDEP}]
-	watchdog? ( dev-python/python-systemd[${PYTHON_USEDEP}] )
+	$(python_gen_cond_dep '
+		>=dev-python/numpy-2.0[${PYTHON_USEDEP}]
+		>=dev-python/scipy-1.16[${PYTHON_USEDEP}]
+		>=dev-python/sounddevice-0.5.1[${PYTHON_USEDEP}]
+		dev-python/dbus-python[${PYTHON_USEDEP}]
+		dev-python/pygobject[${PYTHON_USEDEP}]
+		dev-python/platformdirs[${PYTHON_USEDEP}]
+		watchdog? ( dev-python/python-systemd[${PYTHON_USEDEP}] )
+	')
 "
-# dev-python/pygobject is PyGObject; dev-python/python-systemd (the watchdog
-# dep) is in ::gentoo. The beatnet_lite detector's BeatNet oracle and its
-# native particle-filter module are eval/dev-only — they live in the dev venv,
-# not portage (see the dropped beatnet USE flag), so no atom for them here.
 DEPEND="${RDEPEND}"
 # scikit-build-core pulls itself via DISTUTILS_USE_PEP517; it needs a toolchain,
 # cmake, ninja and pybind11 headers to compile the _prtcqt extension.
 BDEPEND="
-	>=dev-python/pybind11-2.12[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep '
+		>=dev-python/pybind11-2.12[${PYTHON_USEDEP}]
+	')
 	dev-build/cmake
 	dev-build/ninja
 "
