@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>pfh.chaos@gmail.com</email>
+		<name>chaos</name>
+	</maintainer>
+	<longdescription lang="en">
+		Transparent Python implementation of the XLD log checksum algorithm.
+		Validates whether an XLD extraction log file is intact (untampered)
+		using the same logic the OPS/RED trackers run server-side to gate
+		ratio credit on lossless uploads. Pure stdlib, no runtime
+		dependencies. Forked from puddly/xld_logsigner by the OPS team.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">OPSnet/xld_logchecker.py</remote-id>
+		<remote-id type="pypi">xld-logchecker</remote-id>
+	</upstream>
+</pkgmetadata>
