@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>pfh.chaos@gmail.com</email>
+		<name>chaos</name>
+	</maintainer>
+	<longdescription lang="en">
+		A plugin for beets that copies/moves additional files and directories
+		during the import process. Useful for keeping EAC logs, booklets,
+		PDF scans, etc. alongside imported audio in the canonical library
+		layout.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">Holzhaus/beets-extrafiles</remote-id>
+		<remote-id type="pypi">beets-extrafiles</remote-id>
+	</upstream>
+</pkgmetadata>
