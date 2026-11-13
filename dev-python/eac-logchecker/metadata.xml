@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>pfh.chaos@gmail.com</email>
+		<name>chaos</name>
+	</maintainer>
+	<longdescription lang="en">
+		Transparent Python implementation of the EAC log checksum algorithm.
+		Validates whether an EAC extraction log file is intact (untampered)
+		using the same logic the OPS/RED trackers run server-side to gate
+		ratio credit on lossless uploads. Forked from puddly/eac_logsigner
+		by the OPS team.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">OPSnet/eac_logchecker.py</remote-id>
+		<remote-id type="pypi">eac-logchecker</remote-id>
+	</upstream>
+</pkgmetadata>
