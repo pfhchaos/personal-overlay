@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>pfh.chaos@gmail.com</email>
+		<name>chaos</name>
+	</maintainer>
+	<longdescription lang="en">
+		Provides the chunk module that was removed from Python's standard
+		library in 3.13 by PEP 594. Transitive dependency of standard-aifc.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">youknowone/python-deadlib</remote-id>
+		<remote-id type="pypi">standard-chunk</remote-id>
+	</upstream>
+</pkgmetadata>
