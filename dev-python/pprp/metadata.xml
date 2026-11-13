@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>pfh.chaos@gmail.com</email>
+		<name>chaos</name>
+	</maintainer>
+	<longdescription lang="en">
+		Pure-Python implementation of Rijndael (AES) and PBKDF2. Pinned
+		dependency of dev-python/eac-logchecker, which uses pprp for the
+		Rijndael primitives behind EAC's log checksum algorithm.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">dsoprea/RijndaelPbkdf</remote-id>
+		<remote-id type="pypi">pprp</remote-id>
+	</upstream>
+</pkgmetadata>
