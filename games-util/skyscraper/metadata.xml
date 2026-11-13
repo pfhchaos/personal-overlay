@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>pfh.chaos@gmail.com</email>
+		<name>pfhchaos</name>
+	</maintainer>
+	<use>
+		<flag name="7zip">Enable scraping of ROMs inside 7z/zip archives via <pkg>app-arch/7zip</pkg></flag>
+	</use>
+	<upstream>
+		<remote-id type="github">Gemba/Skyscraper</remote-id>
+	</upstream>
+</pkgmetadata>

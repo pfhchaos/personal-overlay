@@ -1,0 +1,16 @@
+BDEPEND=dev-qt/qtbase:6
+DEFINED_PHASES=configure install postinst
+DEPEND=dev-qt/qtbase:6[network,sql,sqlite,xml] 7zip? ( app-arch/7zip )
+DESCRIPTION=CLI scraper maintaining gamelists and artwork for emulator frontends
+EAPI=8
+HOMEPAGE=https://gemba.github.io/skyscraper/ https://github.com/Gemba/Skyscraper
+INHERIT=qmake-utils
+IUSE=7zip
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtbase:6[network,sql,sqlite,xml] 7zip? ( app-arch/7zip )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/Gemba/Skyscraper/archive/refs/tags/3.21.1.tar.gz -> skyscraper-3.21.1.tar.gz
+_eclasses_=qmake-utils	91f1d001b598c8e4730a7a36b2c1849d	qt-utils	5b7ae92788820ab4495683740521513c	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=2f96254454a493ac1d71fe15124542b0
