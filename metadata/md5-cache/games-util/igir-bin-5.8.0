@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Zero-setup ROM collection manager: sort, filter, extract, patch ROMs
+EAPI=8
+HOMEPAGE=https://igir.io/ https://github.com/emmercm/igir
+KEYWORDS=-* ~amd64 ~arm64
+LICENSE=GPL-3+
+RESTRICT=strip test
+SLOT=0
+SRC_URI=amd64? ( https://github.com/emmercm/igir/releases/download/v5.8.0/igir-5.8.0-Linux-amd64.tar.gz ) arm64? ( https://github.com/emmercm/igir/releases/download/v5.8.0/igir-5.8.0-Linux-arm64v8.tar.gz )
+_md5_=289c951585bcc7d6c8da02d18f9a4122
